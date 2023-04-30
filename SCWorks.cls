@@ -37,6 +37,7 @@
 \def\critictitle#1{\gdef\@critictitle{#1}}\critictitle{\hbox to 3cm{\hrulefill}}
 \def\criticname#1{\gdef\@criticname{#1}}\criticname{\hbox to 3cm{\hrulefill}}
 \def\secrname#1{\gdef\@secrname{#1}}\secrname{\hbox to 3cm{\hrulefill}}
+\def\chpretitle#1{\gdef\@chpretitle{#1}}\chpretitle{\hbox to 3cm{\hrulefill}}
 \def\chtitle#1{\gdef\@chtitle{#1}}\chtitle{\hbox to 3cm{\hrulefill}}
 \def\chname#1{\gdef\@chname{#1}}\chname{\hbox to 3cm{\hrulefill}}
 \def\nirtitle#1{\gdef\@nirtitle{#1}}\nirtitle{\hbox to 3cm{\hrulefill}}
@@ -284,6 +285,13 @@
     \typework{\cyr\cyrn\cyra\cyrp\cyri\cyrs\cyra\cyrn}
 }
 
+\DeclareOption{digital}{%
+    \worktype{\CYRI\CYRT\CYRO\CYRG\CYRO\CYRV\CYRA\CYRYA\ \CYRA\CYRT\CYRT\CYRE\CYRS\CYRT\CYRA\CYRC\CYRI\CYRO\CYRN\CYRA\CYRYA\ \CYRR\CYRA\CYRB\CYRO\CYRT\CYRA}
+    \workname{\MakeUppercase{\@worktype}}
+    \renewcommand{\maketitle}{\DigitalMakeTitle}
+    \typework{\cyr\cyrn\cyra\cyrp\cyri\cyrs\cyra\cyrn\cyra}
+}
+
 \DeclareOption{och}{%
     \otdelenie{\cyr\cyro\cyrch\cyrn\cyro\cyrishrt\ \cyrf\cyro\cyrr\cyrm%
     \cyrery\ \cyro\cyrb\cyru\cyrch\cyre\cyrn\cyri\cyrya}
@@ -440,6 +448,8 @@
 \CYRI\CYRYA\ \CYRI\ \CYRS\CYRO\CYRK\CYRR\CYRA\CYRSHCH\CYRE\CYRN\CYRI\CYRYA}}
 \newcommand{\conclusion}{\starsection{\cyr\CYRZ\CYRA\CYRK\CYRL\CYRYU%
 \CYRCH\CYRE\CYRN\CYRI\CYRE}}
+\newcommand{\theory}{\starsection{\CYRT\CYRE\CYRO\CYRR\CYRE\CYRT\CYRI\CYRCH\CYRE\CYRS\CYRK\CYRA\CYRYA \CYRCH\CYRA\CYRS\CYRT\CYRSFTSN}}
+\newcommand{\pract}{\starsection{\CYRP\CYRR\CYRA\CYRK\CYRT\CYRI\CYRCH\CYRE\CYRS\CYRK\CYRA\CYRYA \CYRCH\CYRA\CYRS\CYRT\CYRSFTSN}}
 
 % Section and subsection parameters
 \titlespacing{\section}
@@ -803,6 +813,61 @@
 C\cyro\cyrd\cyre\cyrr\cyrzh\cyra\cyrn\cyri\cyre\ \cyrr\cyra\cyrb%
 \cyro\cyrt\cyrery
 \end{center}
+}
+% --------------------------------------------------------------------------%
+
+% --------------------------------------------------------------------------%
+% Digital title page
+% --------------------------------------------------------------------------%
+\newcommand{\DigitalMakeTitle}
+{
+\thispagestyle{empty}
+\shapka
+
+\vspace{0.7cm}
+
+\begin{center}
+    \CYRC\cyri\cyrf\cyrr\cyro\cyrv\cyra\cyrya\ \cyrk\cyra\cyrf\cyre\cyrd\cyrr\cyra
+\end{center}
+
+\vspace{0.7cm}
+{\centering
+\textbf{\MakeUppercase{\@title}}
+\\[0.3cm]
+{\@workname}
+
+}
+
+\vspace{0.5cm}
+
+\begin{flushleft}
+\cyro\cyrb\cyru\cyrch\cyra\cyryu\cyrshch\cyri\cyrh\cyrs\cyrya\ \cyrp\cyro\ \CYRD\CYRP\CYRP\ \CYRP\CYRP\ <<\CYRV\cyre\cyrd\cyre\cyrn\cyri\cyre\ \cyrp\cyrr\cyro\cyrf\cyre\cyrs\cyrs\cyri\cyro\cyrn\cyra\cyrl\cyrsftsn\cyrn\cyro\cyrishrt\ \cyrd\cyre\cyrya\cyrt\cyre\cyrl\cyrsftsn\cyrn\cyro\cyrs\cyrt\cyri\ \cyrn\cyra\ \cyro\cyrs\cyrn\cyro\cyrv\cyre\ \cyrd\cyra\cyrn\cyrn\cyrery\cyrh:\ \cyrp\cyrr\cyri\cyrm\cyre\cyrn\cyre\cyrn\cyri\cyre\ \cyrm\cyre\cyrt\cyro\cyrd\cyro\cyrv\ \cyrm\cyra\cyrsh\cyri\cyrn\cyrn\cyro\cyrg\cyro\ \cyro\cyrb\cyru\cyrch\cyre\cyrn\cyri\cyrya>>\ \\
+\@author
+\end{flushleft}
+\vfill
+
+\noindent
+\CYRN\cyra\cyru\cyrch\cyrn\cyrery\cyrishrt\ \cyrr\cyru\cyrk\cyro\cyrv\cyro\cyrd\cyri\cyrt\cyre\cyrl\cyrsftsn:\\
+\signature{\@satitle}{\@saname}
+
+\vspace{0.5cm}
+
+\noindent
+\CYRN\cyra\cyrs\cyrt\cyra\cyrv\cyrn\cyri\cyrk:\\
+\signature{\@patitle}{\@paname}
+
+\vspace{0.5cm}
+
+\noindent
+\CYRR\cyru\cyrk\cyro\cyrv\cyro\cyrd\cyri\cyrt\cyre\cyrl\cyrsftsn\ \CYRD\CYRP\CYRP\ \CYRP\CYRP:\\
+\signatureline{\@chpretitle}{}\\
+\signature{\@chtitle}{\@chname}
+
+\vfill
+{\centering{\cyr\CYRS\cyra\cyrr\cyra\cyrt\cyro\cyrv\ \@date}
+
+}
+\newpage
 }
 % --------------------------------------------------------------------------%
 

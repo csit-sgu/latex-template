@@ -10,6 +10,8 @@
 *.pygstyle
 *.synctex
 *.pyg
+*.blg
+*.bbl
 *.pdf
 
 *.DS_Store
