@@ -23,6 +23,8 @@
 %                 по умолчанию выключен
 \usepackage{preamble}
 
+
+
 \begin{document}
 
 % Кафедра (в родительном падеже)
@@ -135,13 +137,8 @@
 % Отобразить все источники. Даже те, на которые нет ссылок.
 % \nocite{*}
 
-% Меняем inputencoding на лету, чтобы работать с библиографией в кодировке
-% `cp1251', в то время как остальной документ находится в кодировке `utf8'
-% Credit: Никита Рыданов
-\inputencoding{cp1251}
 \bibliographystyle{gost780uv}
 \bibliography{thesis}
-\inputencoding{utf8}
 
 % При использовании biblatex вместо bibtex
 % \printbibliography
