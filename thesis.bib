@@ -1,129 +1,88 @@
-% !TeX encoding = Windows-1251
+% Пример оформления библиографии для ugost2003
 
-@BOOK{JohnLevine,
-  author    = {John Levine},
-  title     = {flex \& bison},
-  subtitle  = {Unix Text Processing Tools},
-  publisher = {O�Reilly Media},
-  year      = {2009},
-  language  = {english},
-  pages     = {294},
+% Книга
+% Необходимые поля:
+% - Название (title)
+% - Автор(ы) (author, разделяются c помощью "and")
+% - Город издательства (address)
+% - Наименование издательства (publisher)
+% - Год издания (year)
+% - Общее кол-во страниц (numpages, опционально, либо везде ставить, либо нет)
+% Пример оформления русской книги
+@book{henrick2017ml,
+  title      = {Машинное обучение},
+  author     = {Хенрик, Б. and Джозеф, Р. and Марк, Ф.},
+  publisher  = {Издательский дом Питер},
+  address    = {Санкт"=Петербург},
+  year       = {2017},
+  language   = {russian}  
 }
 
-@BOOK{MSDN,
-  title = {�������� ���������� Windows Forms � ������� .NET Framework (C++) [{�}���������� ������]},
-  note  = {URL:~\url{http://msdn.microsoft.com/ru-ru/library/vstudio/ms235634(v=vs.100).aspx} (���� ��������� 12.07.2013). ����. � ���. ��. ���.},
+% Пример оформления английской книги
+@book{human_earing,
+  title     = {Auditory Neuroscience: Making sense of sound},
+  author    = {Schnupp, Jan and Nelken, Israel--Junior and King, Andrew},
+  publisher = {MIT press},
+  address   = {New York},
+  year      = {2011},
 }
 
-@CONFERENCE{lienhart_maydt_2002,
-  address   = {Rochester, USA},
-  author    = {Lienhart, R. and Maydt, J.},
-  booktitle = {Proceedings of the International Conference on Image Processing},
-  title     = {An Extended Set of Haar-like Features for Rapid Object Detection},
-  year      = {2002},
-  volume    = {1},
-  pages     = {900-903}
+
+% Статья
+% Необходимые поля:
+% - Название статьи (title)
+% - Автор(ы) (author, разделяются c помощью "and")
+% - Название журнала (journal)
+% - Идентификационные данные (хотя бы одно из):
+%   - Том (volume)
+%   - Номер (number)
+%   - Выпуск
+% - Год издания (year)
+% - Страницы (диапазон в журнале) (pages)
+%     Замеч.: страницы всегда оформляются интервалом даже если статья на одну страницу
+
+% Пример оформления статьи на английском языке
+@article{attention,
+  title    = {Attention is all you need},
+  author   = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, {\L}ukasz and Polosukhin, Illia},
+  journal  = {Advances in neural information processing systems},
+  volume   = {30},
+  number   = {2},
+  pages    = {14--14},
+  year     = {2017}
 }
 
-@ARTICLE{Yoffe_1993_AP_42_173,
-  author  = {A. D. Yoffe},
-  title   = {Low-dimensional systems: quantum size effects and electronic
-             properties of semiconductor microcrystallites (zero-dimensional
-             systems) and some quasi-two-dimensional systems},
-  journal = {Adv. Phys.},
-  pages   = {173--266},
-  volume  = {42},
-  year    = {1993},
-  doi     = {10.1080/00018739300101484},
+% Пример оформления статьи на русском языке
+@article{classification_sound,
+  title        = {Классификация музыкальных композиций по исполнителям на основе машинного обучения},
+  author       = {Н. С. Лысенко and Т. А. Приходько},
+  journal      = {Прикладная математика: современные проблемы математики, информатики и моделирования},
+  volume       = {2},
+  pages        = {121--227},
+  year         = {2020},
+  language     = {russian}
 }
 
-@ARTICLE{Efros_1982_FTP_16_7_1209,
-  author   = {{\relax ��}. �. ����� and �. �. ����� and �. �. ������� and  Segall, B.},
-  title    = {��������� ���������� ����� � ����������������� ����},
-  journal  = {������ � ������� ���������������},
-  year     = {1982},
-  volume   = {16},
-  number   = {7},
-  pages    = {1209--1214},
-  language = {russian},
+% Электронный ресурс
+% Необходимые поля:
+% - URL (url)
+% - Заголовок с экрана (title)
+% - Дата обращения (urldate, не позднее официальной даты сдачи работы)
+% Для электронных ресурсов лучше оставлять language = {russian}
+% вне зависимости от реального языка источника
+
+% Пример оформления электронного источника на английском языке
+@online{docker-docs,
+  title={Docker Docs},
+  url = {https://docs.docker.com/},
+  urldate = {27.05.2023},
+  language = {russian}
 }
 
-@BOOK{Anselm_1978,
-  author    = {�. �. �������},
-  title     = {�������� � ������ ���������������},
-  publisher = {�����},
-  address   = {������},
-  year      = {1978},
-  language  = {russian},
-}
-
-@INPROCEEDINGS{Segall_1968,
-  author    = {B. Segall},
-  year      = {1968},
-  editor    = {S. M. Ryvkin},
-  booktitle = {Proceedings of IXth Conference on the Physics of Semiconductors, Moscow, 1968},
-  pages     = {425},
-  address   = {Leningrad},
-  publisher = {Nauka},
-}
-
-@INBOOK{Agranovich_1983,
-  editor    = {V. M. Agranovich and R. M. Hochstrasser},
-  title     = {Spectroscopy and Excitation Dynamics of Condensed Molecular Systems},
-  chapter   = {6},
-  publisher = {North-Holland},
-  year      = {1983},
-  series    = {Modern Problems in Condensed Matter Sciences},
-  address   = {Amsterdam},
-  isbn      = {0444863133},
-}
-
-@INCOLLECTION{InP,
-  title        = {{InP Basic Parameters at 300 K} [{�}���������� ������]},
-  booktitle    = {Electronic archive New Semiconductor Materials. Characteristics and Properties},
-  organization = {Ioffe Physico-Technical Institute},
-  address      = {St. Petersburg},
-  year         = {2001},
-  note         = {URL:~{http://www.ioffe.rssi.ru/SVA/NSM/Semicond/InP/basic.html}\ (���� ��������� 01.11.2009). ����. � ���. ��. ����.}
-}
-
-@PHDTHESIS{Mishchenko_1996,
-  author   = {�. �. �������},
-  title    = {��������� ��������� ����� � ������� ����������������� ���������� � �������},
-  school   = {��� ��. �.~�.~������},
-  year     = {1996},
-  language = {russian},
-}
-
-@DOCDISSER{Skvortsov_2008,
-  author   = {�. �. ��������},
-  title    = {�������������� � ����������������� ������� � ��������������� ��������},
-  school   = {��� ��. �.~�.~������},
-  year     = {2008},
-  language = {russian},
-}
-
-% old-style arXiv reference
-@ARTICLE{Perelman_2003_math:0307245,
-  author = {Grisha Perelman},
-  title  = {Finite extinction time for the solutions to the Ricci flow on certain three-manifolds},
-  eprint = {math/0307245},
-}
-
-% new-style arXiv reference
-@ARTICLE{Nielsen_2010_1006.2735,
-  title         = {A configuration interaction analysis of exchange in double quantum dots},
-  author        = {Erik Nielsen and Richard P. Muller},
-  archivePrefix = {arXiv},
-  eprint        = {1006.2735},
-  primaryClass  = {cond-mat},
-}
-
-@BOOK{matrix_87,
-  author    = {�������, �. and ������, �.},
-  title     = {������ ������ ��� ����������� �����},
-  publisher = {���},
-  address   = {�.},
-  year      = {1987},
-  language  = {russian},
+% Пример оформления электронного источника на русском языке
+@online{fkn,
+  title = {Курс <<Машинное обучение>> на ФКН ВШЭ},
+  url = {https://github.com/esokolov/ml-course-hse},
+  urldate = {25.05.2024},
+  language = {russian}
 }
